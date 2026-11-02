@@ -6,8 +6,8 @@
 
 **<!-- count -->244<!-- /count --> pixel art effects and animations, every one a small piece of code.** Fire,
 explosions, magic, weather, UI, pickups, critters and more. Play them live, recolor and mirror them, drop them into
-a browser game, or export sprite sheets for any engine. Plus a Claude Code skill that makes new ones the way a
-picky pixel artist would: draft, render, look, refine.
+a browser game, or export sprite sheets for any engine. Plus an agent skill for DSH, Claude Code and Codex that
+makes new ones the way a picky pixel artist would: draft, render, look, refine.
 
 Every effect that involves a character is **acted out**: he winds up, lets go, freezes on contact and recovers, and a
 target takes the hit. Twelve whole moves chain the effects into attacks from wind-up to recovery.
@@ -149,14 +149,23 @@ The body is yours to use too: `skeleton(pose)` gives you every joint of a pose i
 
 ## the skill.
 
-The `pixelfx` skill teaches Claude Code to find, use, export and make effects. Install it as a plugin:
+The same `pixelfx` skill works in DSH, Claude Code and Codex. Claude Code can install it as a plugin:
 
 ```
 /plugin marketplace add patch-gg/pixelfx
 /plugin install pixelfx@pixelfx
 ```
 
-or copy `skills/pixelfx` into `~/.claude/skills/`. Then ask for what you want:
+For project-local use, copy the skill into the host's discovery directory:
+
+```bash
+mkdir -p .dsh/skills .agents/skills .claude/skills
+cp -R skills/pixelfx .dsh/skills/       # DSH
+cp -R skills/pixelfx .agents/skills/    # Codex
+cp -R skills/pixelfx .claude/skills/    # Claude Code
+```
+
+Then ask for what you want:
 
 - "Add a frost nova to my mage's ultimate."
 - "Make five takes on a coin pickup sparkle and show me the best two."

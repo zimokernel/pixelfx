@@ -1,6 +1,6 @@
 ---
 name: pixelfx
-description: Make pixel art effects and sprite animations in code with the pixelfx library, which has 244 ready-made ones, acted out by a character who winds up, freezes on contact and recovers (fire, explosions, water, ice, lightning, sci-fi, melee, impacts, projectiles, spawn and death, arcane, holy, shadow, status, nature, weather, UI, pickups, transitions, critters) to drop into a game, recolor, export as sprite sheets or remix, plus a draft, render, look, refine loop that makes new ones look hand-animated. Use when someone wants pixel art VFX, sprite animations or sprite sheets, game juice, a specific effect ("a frost nova for my mage", "a coin pickup sparkle"), wants to use or export a pixelfx effect in Godot, Unity, Phaser or a canvas game, or wants their pixel effects to look better.
+description: Create, customize, use, and export pixel-art effects and acted-out sprite animations with pixelfx. Works in DSH, Claude Code, and Codex; use when someone wants game VFX, a specific effect or move, sprite sheets, or help making pixel effects look better.
 license: MIT
 compatibility: Node 18 or newer. ffmpeg is optional (GIF and MP4 previews).
 ---
@@ -10,6 +10,11 @@ compatibility: Node 18 or newer. ffmpeg is optional (GIF and MP4 previews).
 Pixel art effects as code. Each effect is one file, `src/fx/<category>/<name>.js`, that draws into two buffers:
 **color** (pixels: opaque, dithered or truly translucent) and **light** (additive glow). No images, so an effect
 can be played live, recolored, mirrored, reseeded and rendered to a sprite sheet for any engine.
+
+This skill is shared by DSH, Claude Code, and Codex. Use the workspace and tools available in the current host;
+do not assume host-specific tool names or image-reading capabilities. If a needed capability is unavailable,
+complete the checks you can and state what could not be verified. Do not claim to have run a command or inspected
+an image unless you did.
 
 The method is Hugo Duprez's ([How to make (good) pixel art effects with
 Claude](https://www.spritefusion.com/blog/how-to-make-good-pixel-art-effects-with-claude)): code is clay, trust
